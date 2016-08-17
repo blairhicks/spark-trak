@@ -51,6 +51,7 @@ sed -i "" -e "s/ENV_TOKEN_TROPO_SMSEMER_TXT/$token_tropo_smsemer_txt/g" deploy-s
 sed -i "" -e "s/ENV_TOKEN_TROPO_CALLSPARK_CALL/$token_tropo_callspark_call/g" deploy-spark-trak.json
 sed -i "" -e "s/ENV_TOKEN_TROPO_EMERCONF_CALL/$token_tropo_emerconf_call/g" deploy-spark-trak.json
 sed -i "" -e "s/ENV_TOKEN_TROPO_EMERCONF_TXT/$token_tropo_emerconf_txt/g" deploy-spark-trak.json
+sed -i "" -e "s/MANTL_CONTROL/$control_address/g" deploy-spark-trak.json
 
 
 echo " "
@@ -58,7 +59,7 @@ echo "***************************************************"
 echo "Installing the spark-trak"
 curl -k -X POST -u $mantl_user:$mantl_password https://$control_address:8080/v2/apps \
 -H "Content-type: application/json" \
--d @$deploy-spark-trak.json \
+-d @deploy-spark-trak.json \
 | python -m json.tool
 
 echo "***************************************************"

@@ -25,6 +25,7 @@ var token_tropo_callspark_call = process.env.TOKEN_TROPO_CALLSPARK_CALL;
 var token_tropo_emerconf_call = process.env.TOKEN_TROPO_EMERCONF_CALL;
 var token_tropo_emerconf_txt = process.env.TOKEN_TROPO_EMERCONF_TXT;
 var myToken = "Bearer " + token_spark;
+var myBaseUrl=process.env.MANTL_CONTROL;
 
 
 // define flint setup
@@ -32,7 +33,7 @@ var config = {
     // url to access this app's webservice
 //    baseUrl: 'http://carebot-twittbrod.c9users.io',
 //    baseUrl: 'https://control.green.browndogtech.com/marathon/v2/apps/imapex/spark-trak/spark-trak-bot',
-    baseUrl: 'http://localhost:8080/callback',
+    baseUrl: myBaseUrl,
 //    baseUrl: 'https://mysparkcareassistantbot.herokuapp.com',
     // port that local server listens on
  //   localPort: process.env.PORT,
