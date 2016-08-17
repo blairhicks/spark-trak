@@ -12,12 +12,15 @@ echo
 echo "What is the password for your Mantl account?  "
 read -s mantl_password
 echo
-echo "What is the your Docker Username?  "
-read docker_username
+echo "What deployment name do you want to use?"
+read deployment_name
 echo
+echo "What folder name do you want to use?"
+read folder_name
 
-echo "Uninstalling the demoapp at class/$docker_username"
-curl -k -X DELETE -u $mantl_user:$mantl_password https://$control_address:8080/v2/apps/class/$docker_username \
+
+echo "Uninstalling the spark-trak-bot at $folder_name/$deployment_name"
+curl -k -X DELETE -u $mantl_user:$mantl_password https://$control_address:8080/v2/apps/$folder_name/$deployment_name/spark-trak-bot \
 -H "Content-type: application/json"
 echo
 

@@ -16,7 +16,7 @@
     "protocol": "TCP",
     "portIndex": 0
   }],
-  "id": "/imapex/spark-trak/spark-trak-bot",
+  "id": "/ENV_FOLDER_NAME/ENV_DEPLOYMENT_NAME/spark-trak-bot",
   "instances": 1,
   "cpus": 0.1,
   "mem": 16,
@@ -26,6 +26,8 @@
     "TOKEN_TROPO_CALLSPARK_CALL": "ENV_TOKEN_TROPO_CALLSPARK_CALL",
     "TOKEN_TROPO_EMERCONF_CALL": "ENV_TOKEN_TROPO_EMERCONF_CALL",
     "TOKEN_TROPO_EMERCONF_TXT": "ENV_TOKEN_TROPO_EMERCONF_TXT",
-    "MANTL_CONTROL": "ENV_MANTL_CONTROL"
+    "MANTL_CONTROL": "ENV_MANTL_CONTROL",
+    "APP_URL": "http://ENV_FOLDER_NAME-ENV_DEPLOYMENT_NAME-spark-trak-bot.ENV_APP_DOMAIN",
+    "BOT_EMAIL": "ENV_BOT_EMAIL"
   }
 }

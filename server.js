@@ -25,8 +25,8 @@ var token_tropo_callspark_call = process.env.TOKEN_TROPO_CALLSPARK_CALL;
 var token_tropo_emerconf_call = process.env.TOKEN_TROPO_EMERCONF_CALL;
 var token_tropo_emerconf_txt = process.env.TOKEN_TROPO_EMERCONF_TXT;
 var myToken = "Bearer " + token_spark;
-var myBaseUrl=process.env.MANTL_CONTROL;
-
+var myBaseUrl=process.env.APP_URL;
+var myBotEmail=process.env.BOT_EMAIL;
 
 // define flint setup
 var config = {
@@ -39,12 +39,12 @@ var config = {
  //   localPort: process.env.PORT,
     localPort: 8080,
    // spark account email
-    sparkEmail: 'twittbrod@gmail.com',
+    sparkEmail: myBotEmail,
     // spark api token
-    sparkToken: token_spark
-    //sparkToken: token_spark,
+    //sparkToken: token_spark
+    sparkToken: token_spark,
     // bot ready message
-    //announceMessage: 'I am alive and well.  How may I help you today?'
+    announceMessage: 'I am alive and well.  How may I help you today? (For some ideas, type /help)'
 };
 
 // init flint framework
