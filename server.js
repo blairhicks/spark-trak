@@ -28,6 +28,9 @@ var myToken = "Bearer " + token_spark;
 var myBaseUrl=process.env.APP_URL;
 var myBotEmail=process.env.BOT_EMAIL;
 
+console.log("myBaseUrl: "+myBaseUrl);
+console.log("myBotEmail: "+myBotEmail);
+
 // define flint setup
 var config = {
     // url to access this app's webservice
@@ -38,7 +41,6 @@ var config = {
     // port that local server listens on
  //   localPort: process.env.PORT,
     localPort: 8080,
-    externalPort: 10028,
    // spark account email
     sparkEmail: myBotEmail,
     // spark api token
