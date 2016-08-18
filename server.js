@@ -41,14 +41,17 @@ var config = {
    // spark account email
     sparkEmail: myBotEmail,
     // spark api token
-    //sparkToken: token_spark
-    sparkToken: token_spark,
+    sparkToken: token_spark
+    //sparkToken: token_spark,
     // bot ready message
-    announceMessage: 'I am alive and well.  How may I help you today? (For some ideas, type /help)'
+    //announceMessage: 'I am alive and well.  How may I help you today? (For some ideas, type /help)'
 };
 
+console.log(myBaseUrl);
 // init flint framework
+console.log("Initialize flint now");
 var flint = new Flint(config);
+console.log("flint initialization complete");
 
 /*
  // startup message
@@ -61,14 +64,17 @@ var flint = new Flint(config);
 
 // echo test
 flint.hears('/echo', function(bot, trigger) {
+    console.log("echo command");
     console.log("echo " + trigger.args.join(' '));
     bot.say(trigger.args.join(' '));
 });
 
+/*
 // get listen port
 flint.hears('/listenport', function(bot, trigger) {
     bot.say("local server listens on port " + process.env.PORT);
 });
+*/
 
 flint.hears('/getroomid', function(bot, trigger) {
     console.log("/getroomid");
@@ -205,6 +211,7 @@ flint.hears('/getepic', function(bot, trigger) {
 
 // get SIP URI
 flint.hears('/geturi', function(bot, trigger) {
+    console.log("/geturi command");
     bot.say(bot.myroom.sipAddress);
 });
 

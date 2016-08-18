@@ -5,3 +5,5 @@ drone_secrets.yml
 .idea/
 drone-secrets.yml
 env.list
+/server.js
+deploy-spark-trak.json
