@@ -27,7 +27,7 @@ COPY . /usr/src/app
 #COPY ./app.js /usr/src/app/
 #COPY ./server.js /usr/src/app/
 
-EXPOSE 8080
+EXPOSE 80
 
 #CMD [ "npm", "start" ]
 CMD [ "node", "server.js" ]

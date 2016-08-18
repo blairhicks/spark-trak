@@ -40,7 +40,7 @@ var config = {
 //    baseUrl: 'https://mysparkcareassistantbot.herokuapp.com',
     // port that local server listens on
  //   localPort: process.env.PORT,
-    localPort: 8080,
+    localPort: 80,
    // spark account email
     sparkEmail: myBotEmail,
     // spark api token
