@@ -38,6 +38,7 @@ var config = {
     // port that local server listens on
  //   localPort: process.env.PORT,
     localPort: 8080,
+    externalPort: 10028,
    // spark account email
     sparkEmail: myBotEmail,
     // spark api token
