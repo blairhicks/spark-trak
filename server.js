@@ -53,6 +53,16 @@ console.log("Initialize flint now");
 var flint = new Flint(config);
 console.log("flint initialization complete");
 
+console.log("sending dm");
+bot.dm('timwittb@cisco.com', 'I am awake.');
+console.log("sent dm");
+
+console.log("sending bot.mywebhook info");
+console.log("bot.mywebhook: "+bot.mywebhook);
+console.log("bot.mywebhook.localport: "+bot.mywebhook.localPort);
+console.log("bot.mywebhook.externalPort: "+bot.mywebhook.externalPort);
+console.log("sent bot.mywebhook info");
+
 /*
  // startup message
  flint.on('started', function(bot) {
