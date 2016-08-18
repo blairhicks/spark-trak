@@ -23,11 +23,11 @@ echo
 echo "What is your Spark bot email?"
 read bot_email
 echo
-echo "What deployment name do you want to use?"
-read deployment_name
-echo
 echo "What folder name do you want to use?"
 read folder_name
+echo
+echo "What deployment name do you want to use?"
+read deployment_name
 echo
 echo "What is your Tropo sms_emergency_text script token (TOKEN_TROPO_SMSEMER_TXT)?"
 read -s token_tropo_smsemer_txt
@@ -58,7 +58,7 @@ sed -i "" -e "s/ENV_BOT_EMAIL/$bot_email/g" deploy-spark-trak.json
 
 echo " "
 echo "***************************************************"
-echo "Installing the spark-trak"
+echo "Installing the sparktrakbot"
 curl -k -X POST -u $mantl_user:$mantl_password https://$control_address:8080/v2/apps \
 -H "Content-type: application/json" \
 -d @deploy-spark-trak.json \
