@@ -59,7 +59,7 @@ sed -i "" -e "s/ENV_BOT_EMAIL/$bot_email/g" deploy-spark-trak.json
 echo " "
 echo "***************************************************"
 echo "Installing the sparktrakbot"
-curl -k -X POST -u $mantl_user:$mantl_password https://$control_address:80/v2/apps \
+curl -k -X POST -u $mantl_user:$mantl_password https://$control_address:8080/v2/apps \
 -H "Content-type: application/json" \
 -d @deploy-spark-trak.json \
 | python -m json.tool
