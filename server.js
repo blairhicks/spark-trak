@@ -34,10 +34,7 @@ console.log("myBotEmail: "+myBotEmail);
 // define flint setup
 var config = {
     // url to access this app's webservice
-//    baseUrl: 'http://carebot-twittbrod.c9users.io',
-//    baseUrl: 'https://control.green.browndogtech.com/marathon/v2/apps/imapex/spark-trak/spark-trak-bot',
     baseUrl: myBaseUrl,
-//    baseUrl: 'https://mysparkcareassistantbot.herokuapp.com',
     // port that local server listens on
  //   localPort: process.env.PORT,
     localPort: 80,
@@ -47,7 +44,7 @@ var config = {
     sparkToken: token_spark
     //sparkToken: token_spark,
     // bot ready message
-    //announceMessage: 'I am alive and well.  How may I help you today? (For some ideas, type /help)'
+    announceMessage: 'I am alive and well.  How may I help you today? (For some ideas, type /help)'
 };
 
 console.log(myBaseUrl);
@@ -58,7 +55,7 @@ console.log("flint initialization complete");
 
 /*
 console.log("sending dm");
-bot.dm('timwittb@cisco.com', 'I am awake.');
+bot.dm('blahicks@cisco.com', 'I am awake.');
 console.log("sent dm");
 
 console.log("sending bot.mywebhook info");
