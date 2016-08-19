@@ -41,7 +41,7 @@ var config = {
    // spark account email
     sparkEmail: myBotEmail,
     // spark api token
-    sparkToken: token_spark
+    sparkToken: token_spark, 
     //sparkToken: token_spark,
     // bot ready message
     announceMessage: 'I am alive and well.  How may I help you today? (For some ideas, type /help)'
