@@ -44,7 +44,7 @@ var config = {
     sparkToken: token_spark, 
     //sparkToken: token_spark,
     // bot ready message
-    announceMessage: 'I am alive and well.  How may I help you today? (For some ideas, type /help)'
+    announceMessage: 'I am a robot.  All is well.  How may I help you today? (For some ideas, type /help)'
 };
 
 console.log(myBaseUrl);
