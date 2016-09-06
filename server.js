@@ -136,7 +136,7 @@ flint.hears('/remove', function(bot, trigger) {
 
 // anytime someone says beer
 flint.hears(/(^| )beer( |.|$)/i, function(bot, trigger) {
-    bot.say('Enjoy a beer, %s!', trigger.person.displayName);
+    bot.say('Enjoy a nice cold beer, %s!', trigger.person.displayName);
 });
 
 // implode room - remove everyone and then remove self
