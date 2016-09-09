@@ -96,6 +96,36 @@ flint.hears('/getroomid', function(bot, trigger) {
     bot.say(bot.myroom.id); 
 });
 
+flint.hears('/loadlist', function(bot, trigger) {
+    var fileArray = trigger.messages.files.id;
+    console.log("fileArray.length: " + fileArray.length);
+    console.log("fileArray: " + fileArray);
+
+    // check if there is a file list
+    if (fileArray.length = 0) {
+        bot.say("Please upload a file in the same message as this command (if multiple files are uploaded in the same message, additional files will be ignored).  The name of the file does not matter.  The file is a comma separated list of values with the following format:");
+        bot.say("   <spark_email_address>");
+    } else {
+        console.log("fileArray[0].id: " + fileArray[0].id);
+        request({
+            url: "https://api.ciscospark.com/v1/contents/" + fileArray[0].id,
+            method: "GET",
+            headers: {
+                "Authorization": "BEARER " + token_spark,
+                "Content-Type": "text/plain"
+//                "Content-Type": "application/json"
+            } //headers
+            }, //request
+            function (error, response, body) {
+                console.log("body: " + body);
+                bot.say(body);
+            } //function
+        ); //request
+    } //else
+
+}); //flint.hears
+
+
 // flint normalizes arguments to all lower case, so this does not work for getting room details.  Must hard code roomId
 flint.hears('/getroomdetails', function(bot, trigger) {
     console.log("Received room id: " + trigger.args);
@@ -106,7 +136,7 @@ flint.hears('/getroomdetails', function(bot, trigger) {
         method: "GET",
         headers: {
             "Authorization": "BEARER "+token_spark,
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
         qs: {
             showSipAddress: "true"
