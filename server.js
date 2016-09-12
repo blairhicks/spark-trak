@@ -80,7 +80,6 @@ console.log("sent bot.mywebhook info");
  });
  */
 
-//flint.say("test message");
 
 // echo test
 flint.hears('/echo', function(bot, trigger) {
@@ -88,3 +87,10 @@ flint.hears('/echo', function(bot, trigger) {
     console.log("echo " + trigger.args.join(' '));
     bot.say(trigger.args.join(' '));
 });
+
+flint.on('error', function(err) {
+    console.log("ERROR");
+    console.log(err);
+});
+
+flint.say("test message");
