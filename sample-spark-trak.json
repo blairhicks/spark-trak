@@ -19,7 +19,7 @@
   "id": "/ENV_FOLDER_NAME/ENV_DEPLOYMENT_NAME/sparktrakbot",
   "instances": 1,
   "cpus": 0.1,
-  "mem": 16,
+  "mem": 64,
   "env": {
     "TOKEN_SPARK_BOT": "ENV_TOKEN_SPARK_BOT",
     "TOKEN_TROPO_SMSEMER_TXT": "ENV_TOKEN_TROPO_SMSEMER_TXT",
