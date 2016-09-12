@@ -57,6 +57,7 @@ console.log(myBaseUrl);
 // init flint framework
 console.log("Initialize flint now");
 var flint = new Flint(config);
+flint.start();
 console.log("flint initialization complete");
 //console.log(config);
 
@@ -72,13 +73,13 @@ console.log("bot.mywebhook.externalPort: "+bot.mywebhook.externalPort);
 console.log("sent bot.mywebhook info");
 */
 
-/*
- // startup message
- flint.on('started', function(bot) {
+
+// startup message
+flint.on('started', function(bot) {
  console.log('Flint started.');
  bot.say('I am alive and well.  How may I help you today?');
- });
- */
+});
+
 
 
 // echo test
