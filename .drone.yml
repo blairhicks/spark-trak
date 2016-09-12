@@ -2,7 +2,7 @@ build:
     image: node:5.11.1
     commands:
         - npm install
-        - npm install -g node-flint@3.0.7
+        - npm install -g node-flint
         - npm install -g fs
         - npm install -g csv-parse
         - npm install -g request

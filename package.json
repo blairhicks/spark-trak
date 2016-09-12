@@ -8,7 +8,7 @@
   "dependencies": {
     "csv-parse": "^1.1.1",
     "fs": "0.0.2",
-    "node-flint": "^3.0.5",
+    "node-flint": "^4.1.1",
     "request": "^2.72.0",
     "should": "^9.0.2"
   }

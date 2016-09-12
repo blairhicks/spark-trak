@@ -10,7 +10,7 @@ COPY package.json /usr/src/app/
 
 RUN npm install
 
-RUN npm install -g node-flint@3.0.7 && \
+RUN npm install -g node-flint && \
     npm install -g fs && \
     npm install -g csv-parse && \
     npm install -g request && \
