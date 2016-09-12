@@ -57,7 +57,7 @@ console.log(myBaseUrl);
 // init flint framework
 console.log("Initialize flint now");
 var flint = new Flint(config);
-//flint.start();
+flint.start();
 console.log("flint initialization complete");
 //console.log(config);
 
@@ -94,4 +94,4 @@ flint.on('error', function(err) {
     console.log(err);
 });
 
-flint.say("test message");
+//flint.say("test message");
